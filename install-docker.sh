@@ -14,7 +14,7 @@ echo "adding the current user to docker group"
 sudo usermod -aG docker $USER
 
 echo "reactivating docker group"
-sudo usermod -aG docker $USER
+newgrp docker
 
 echo "activating docker as service"
 sudo systemctl enable docker
