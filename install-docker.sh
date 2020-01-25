@@ -11,9 +11,11 @@ sudo mv docker-compose-$(uname -s)-$(uname -m) ./binaries/docker-compose-$(uname
 sudo cp binaries/* /usr/bin/
 sudo chmod +x /usr/local/bin/docker-compose
 
+
 echo "docker installation complete adding to systemctl"
 docker --version
 docker-compose --version
+
 
 sudo mkdir -p /etc/systemd/system/docker.service.d
 
