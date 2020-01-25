@@ -8,12 +8,9 @@ sudo rm -f ./binaries/docker-19.03.5.tgz
 curl -O https://github.com/docker/compose/releases/download/1.25.1/docker-compose-$(uname -s)-$(uname -m) -kL
 sudo mv docker-compose-$(uname -s)-$(uname -m) ./binaries/docker-compose-$(uname -s)-$(uname -m)
 
-sudo cp binaries/* /usr/bin/ && sudo dockerd &
+sudo cp binaries/* /usr/bin/
 sudo chmod +x /usr/local/bin/docker-compose
 
-echo "docker installation complete"
-docker --version
-docker-compose --version
 
 echo "creating docker group"
 sudo groupadd docker
